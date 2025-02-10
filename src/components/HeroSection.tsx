@@ -20,63 +20,63 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fade-in">
-            <span className="inline-block px-4 py-2 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full text-sm font-medium">
+            <span className="inline-block px-4 py-2 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full text-sm font-montserrat font-medium">
               Аутстафинг персонала для вашего бизнеса
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="font-raleway text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
               Рабочий персонал на любой срок – 
               <span className="text-[#8B5CF6]">быстро, надежно, выгодно</span>
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="font-montserrat text-xl text-gray-600">
               Предоставляем квалифицированный персонал для любых задач: от грузчиков до официантов. Оформление за 2 часа, гарантия качества работы.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="group bg-[#8B5CF6] hover:bg-[#7C3AED] transition-colors">
+                  <Button size="lg" className="group bg-[#8B5CF6] hover:bg-[#7C3AED] transition-colors font-montserrat">
                     Заказать персонал
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                   <DialogHeader>
-                    <DialogTitle>Заказать персонал</DialogTitle>
+                    <DialogTitle className="font-raleway text-2xl">Заказать персонал</DialogTitle>
                   </DialogHeader>
                   <div className="grid gap-4 py-4">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium leading-none">
+                      <label htmlFor="name" className="text-sm font-montserrat font-medium leading-none">
                         Ваше имя
                       </label>
                       <input
                         id="name"
                         type="text"
-                        className="w-full p-2 border rounded-md"
+                        className="w-full p-2 border rounded-md font-montserrat"
                         placeholder="Введите ваше имя"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-medium leading-none">
+                      <label htmlFor="phone" className="text-sm font-montserrat font-medium leading-none">
                         Телефон
                       </label>
                       <input
                         id="phone"
                         type="tel"
-                        className="w-full p-2 border rounded-md"
+                        className="w-full p-2 border rounded-md font-montserrat"
                         placeholder="+7 (___) ___-__-__"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium leading-none">
+                      <label htmlFor="message" className="text-sm font-montserrat font-medium leading-none">
                         Сообщение
                       </label>
                       <textarea
                         id="message"
-                        className="w-full p-2 border rounded-md"
+                        className="w-full p-2 border rounded-md font-montserrat"
                         placeholder="Опишите ваши требования"
                         rows={3}
                       />
                     </div>
-                    <Button type="submit" className="bg-[#8B5CF6] hover:bg-[#7C3AED]">
+                    <Button type="submit" className="bg-[#8B5CF6] hover:bg-[#7C3AED] font-montserrat">
                       Отправить заявку
                     </Button>
                   </div>
@@ -85,7 +85,7 @@ export const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10"
+                className="border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 font-montserrat"
                 onClick={scrollToPricing}
               >
                 Узнать стоимость
@@ -105,4 +105,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
