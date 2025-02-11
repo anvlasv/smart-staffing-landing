@@ -1,5 +1,5 @@
 
-import { Users, Package, Hammer, Shield, UtensilsCrossed, BedDouble } from "lucide-react";
+import { Users, Package, Hammer, Shield, BedDouble } from "lucide-react";
 import { Card } from "./ui/card";
 
 const services = [
@@ -26,12 +26,6 @@ const services = [
     title: "Охранники",
     description: "Обеспечение безопасности объектов",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-  },
-  {
-    icon: UtensilsCrossed,
-    title: "Официанты",
-    description: "Обслуживание мероприятий любого масштаба",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
   },
   {
     icon: BedDouble,

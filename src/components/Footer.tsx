@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-4">Smart Staffing</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-4">ГрузВзяли</h3>
             <p className="text-muted-foreground">
               Профессиональный аутстаффинг персонала в России. Быстро, надежно, выгодно.
             </p>
@@ -20,9 +20,9 @@ export const Footer = () => {
                 <Phone className="h-5 w-5" />
                 <span>+7 (495) 123-45-67</span>
               </a>
-              <a href="mailto:info@smartstaffing.ru" className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:info@gruzivzali.ru" className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
-                <span>info@smartstaffing.ru</span>
+                <span>info@gruzivzali.ru</span>
               </a>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
@@ -51,7 +51,7 @@ export const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-muted text-center text-muted-foreground">
-          <p>© {new Date().getFullYear()} Smart Staffing. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} ГрузВзяли. Все права защищены.</p>
         </div>
       </div>
     </footer>
