@@ -1,5 +1,5 @@
 
-import { Users, Package, Hammer, Shield, BedDouble } from "lucide-react";
+import { Users, Package, Hammer, Brush, BedDouble } from "lucide-react";
 import { Card } from "./ui/card";
 
 const services = [
@@ -22,9 +22,9 @@ const services = [
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
   },
   {
-    icon: Shield,
-    title: "Охранники",
-    description: "Обеспечение безопасности объектов",
+    icon: Brush,
+    title: "Уборщики",
+    description: "Профессиональная уборка помещений",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
   },
   {
