@@ -21,20 +21,20 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fade-in">
             <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-none font-montserrat font-medium border-2 border-primary">
-              Аутстафинг персонала для вашего бизнеса
+              Профессиональный аутстаффинг персонала в России
             </span>
             <h1 className="font-raleway text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-              Рабочий персонал на любой срок – 
-              <span className="text-primary">быстро, надежно, выгодно</span>
+              Предоставление персонала для вашего бизнеса – 
+              <span className="text-primary">быстро и надежно</span>
             </h1>
             <p className="font-montserrat text-xl text-gray-300">
-              Предоставляем квалифицированный персонал для любых задач: от грузчиков до официантов. Оформление за 2 часа, гарантия качества работы.
+              Оказываем услуги по предоставлению квалифицированного персонала любой специализации: грузчики, разнорабочие, упаковщики, официанты. Оформление договора за 2 часа, гарантия качества работы, доступные цены.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button size="lg" className="group bg-primary hover:bg-primary/80 transition-colors font-montserrat rounded-none border-2 border-primary">
-                    Заказать персонал
+                    Заказать персонал сейчас
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </DialogTrigger>
@@ -67,12 +67,12 @@ export const HeroSection = () => {
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-montserrat font-medium leading-none text-white">
-                        Сообщение
+                        Опишите ваши требования
                       </label>
                       <textarea
                         id="message"
                         className="w-full p-2 bg-accent border-2 border-primary text-white font-montserrat rounded-none"
-                        placeholder="Опишите ваши требования"
+                        placeholder="Укажите количество работников, сроки, локацию и другие важные детали"
                         rows={3}
                       />
                     </div>
@@ -88,14 +88,14 @@ export const HeroSection = () => {
                 className="border-2 border-primary text-primary hover:bg-primary/10 font-montserrat rounded-none"
                 onClick={scrollToPricing}
               >
-                Узнать стоимость
+                Узнать стоимость услуг
               </Button>
             </div>
           </div>
           <div className="hidden lg:block">
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-              alt="Профессиональная команда"
+              alt="Профессиональные услуги аутстаффинга персонала"
               className="rounded-none border-4 border-primary shadow-2xl animate-fade-in hover:scale-105 transition-transform duration-500"
             />
           </div>
