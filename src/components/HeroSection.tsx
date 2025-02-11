@@ -16,67 +16,67 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-[#E5DEFF] to-white overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center bg-background overflow-hidden">
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left space-y-8 animate-fade-in">
-            <span className="inline-block px-4 py-2 bg-[#8B5CF6]/10 text-[#8B5CF6] rounded-full text-sm font-montserrat font-medium">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-none font-montserrat font-medium border-2 border-primary">
               Аутстафинг персонала для вашего бизнеса
             </span>
-            <h1 className="font-raleway text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-tight">
+            <h1 className="font-raleway text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
               Рабочий персонал на любой срок – 
-              <span className="text-[#8B5CF6]">быстро, надежно, выгодно</span>
+              <span className="text-primary">быстро, надежно, выгодно</span>
             </h1>
-            <p className="font-montserrat text-xl text-gray-600">
+            <p className="font-montserrat text-xl text-gray-300">
               Предоставляем квалифицированный персонал для любых задач: от грузчиков до официантов. Оформление за 2 часа, гарантия качества работы.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="group bg-[#8B5CF6] hover:bg-[#7C3AED] transition-colors font-montserrat">
+                  <Button size="lg" className="group bg-primary hover:bg-primary/80 transition-colors font-montserrat rounded-none border-2 border-primary">
                     Заказать персонал
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px]">
+                <DialogContent className="sm:max-w-[425px] bg-background border-primary">
                   <DialogHeader>
-                    <DialogTitle className="font-raleway text-2xl">Заказать персонал</DialogTitle>
+                    <DialogTitle className="font-raleway text-2xl text-white">Заказать персонал</DialogTitle>
                   </DialogHeader>
                   <div className="grid gap-4 py-4">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-montserrat font-medium leading-none">
+                      <label htmlFor="name" className="text-sm font-montserrat font-medium leading-none text-white">
                         Ваше имя
                       </label>
                       <input
                         id="name"
                         type="text"
-                        className="w-full p-2 border rounded-md font-montserrat"
+                        className="w-full p-2 bg-accent border-2 border-primary text-white font-montserrat rounded-none"
                         placeholder="Введите ваше имя"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="text-sm font-montserrat font-medium leading-none">
+                      <label htmlFor="phone" className="text-sm font-montserrat font-medium leading-none text-white">
                         Телефон
                       </label>
                       <input
                         id="phone"
                         type="tel"
-                        className="w-full p-2 border rounded-md font-montserrat"
+                        className="w-full p-2 bg-accent border-2 border-primary text-white font-montserrat rounded-none"
                         placeholder="+7 (___) ___-__-__"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-montserrat font-medium leading-none">
+                      <label htmlFor="message" className="text-sm font-montserrat font-medium leading-none text-white">
                         Сообщение
                       </label>
                       <textarea
                         id="message"
-                        className="w-full p-2 border rounded-md font-montserrat"
+                        className="w-full p-2 bg-accent border-2 border-primary text-white font-montserrat rounded-none"
                         placeholder="Опишите ваши требования"
                         rows={3}
                       />
                     </div>
-                    <Button type="submit" className="bg-[#8B5CF6] hover:bg-[#7C3AED] font-montserrat">
+                    <Button type="submit" className="bg-primary hover:bg-primary/80 font-montserrat rounded-none border-2 border-primary">
                       Отправить заявку
                     </Button>
                   </div>
@@ -85,7 +85,7 @@ export const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-[#8B5CF6] text-[#8B5CF6] hover:bg-[#8B5CF6]/10 font-montserrat"
+                className="border-2 border-primary text-primary hover:bg-primary/10 font-montserrat rounded-none"
                 onClick={scrollToPricing}
               >
                 Узнать стоимость
@@ -96,12 +96,12 @@ export const HeroSection = () => {
             <img
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
               alt="Профессиональная команда"
-              className="rounded-2xl shadow-2xl animate-fade-in hover:scale-105 transition-transform duration-500"
+              className="rounded-none border-4 border-primary shadow-2xl animate-fade-in hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
     </section>
   );
 };
