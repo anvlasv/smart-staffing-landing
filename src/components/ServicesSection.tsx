@@ -21,6 +21,9 @@ const services = [
     description: "Сортировка и упаковка товаров на складе",
     image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
   },
+];
+
+const additionalServices = [
   {
     icon: Brush,
     title: "Уборщики",
@@ -45,9 +48,29 @@ export const ServicesSection = () => {
             Предоставляем персонал для различных сфер бизнеса. Работники для склада, уборщики для офиса и другие специалисты доступны в аренду на любой срок.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden group animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-6">
+                <div className="mb-4">
+                  <service.icon className="h-12 w-12 text-primary group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            </Card>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {additionalServices.map((service, index) => (
+            <Card key={index} className="overflow-hidden group animate-fade-in" style={{ animationDelay: `${(index + 3) * 100}ms` }}>
               <div className="h-48 overflow-hidden">
                 <img
                   src={service.image}

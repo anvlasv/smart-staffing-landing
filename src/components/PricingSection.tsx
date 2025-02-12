@@ -6,7 +6,7 @@ import { Card } from "./ui/card";
 const pricingPlans = [
   {
     title: "Грузчики",
-    price: "от 3000",
+    price: "от 2500",
     period: "за смену",
     features: [
       "Минимальный заказ - 4 часа",
@@ -17,7 +17,7 @@ const pricingPlans = [
   },
   {
     title: "Разнорабочие",
-    price: "от 3500",
+    price: "от 3000",
     period: "за смену",
     features: [
       "Опыт работы от 1 года",
@@ -29,7 +29,7 @@ const pricingPlans = [
   },
   {
     title: "Уборщики",
-    price: "от 3000",
+    price: "от 2000",
     period: "за смену",
     features: [
       "Профессиональные средства",
