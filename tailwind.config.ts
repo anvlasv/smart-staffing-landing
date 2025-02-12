@@ -26,15 +26,15 @@ export default {
       colors: {
         border: "#E2E8F0",
         input: "#E2E8F0",
-        ring: "#4F46E5",
+        ring: "#4169E1",
         background: "#FFFFFF",
         foreground: "#1E293B",
         primary: {
-          DEFAULT: "#4F46E5",
+          DEFAULT: "#4169E1",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#6366F1",
+          DEFAULT: "#32CD32",
           foreground: "#FFFFFF",
         },
         destructive: {
@@ -81,6 +81,9 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "fade-in-up": "fade-in-up 0.5s ease-out forwards",
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
     },
   },
