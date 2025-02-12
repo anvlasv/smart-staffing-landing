@@ -2,6 +2,14 @@
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./ui/dialog";
+import { useToast } from "@/hooks/use-toast";
 
 const pricingPlans = [
   {
@@ -41,8 +49,19 @@ const pricingPlans = [
 ];
 
 export const PricingSection = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Send email to barm.70@gmail.com
+    toast({
+      title: "Заявка отправлена",
+      description: "Мы свяжемся с вами в ближайшее время",
+    });
+  };
+
   return (
-    <section className="py-20 bg-accent" id="pricing">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100" id="pricing">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold mb-4">Прозрачные цены</h2>
@@ -54,7 +73,7 @@ export const PricingSection = () => {
           {pricingPlans.map((plan, index) => (
             <Card
               key={index}
-              className={`p-8 relative animate-fade-in ${
+              className={`p-8 relative animate-fade-in bg-white ${
                 plan.featured
                   ? "border-primary shadow-lg scale-105"
                   : "border-gray-200"
@@ -82,13 +101,57 @@ export const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <Button
-                className={`w-full ${
-                  plan.featured ? "" : "bg-gray-800 hover:bg-gray-700"
-                }`}
-              >
-                Заказать
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    className={`w-full ${
+                      plan.featured ? "bg-primary" : "bg-gray-800 hover:bg-gray-700"
+                    }`}
+                  >
+                    Заказать
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px]">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl">Заказать {plan.title.toLowerCase()}</DialogTitle>
+                  </DialogHeader>
+                  <form onSubmit={handleSubmit} className="grid gap-4 py-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium leading-none">
+                        Ваше имя
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full p-2 border rounded-lg"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium leading-none">
+                        Телефон
+                      </label>
+                      <input
+                        type="tel"
+                        className="w-full p-2 border rounded-lg"
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium leading-none">
+                        Опишите ваши требования
+                      </label>
+                      <textarea
+                        className="w-full p-2 border rounded-lg"
+                        rows={3}
+                        required
+                      />
+                    </div>
+                    <Button type="submit">
+                      Отправить заявку
+                    </Button>
+                  </form>
+                </DialogContent>
+              </Dialog>
             </Card>
           ))}
         </div>
