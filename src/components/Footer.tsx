@@ -16,9 +16,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Контакты</h4>
             <div className="space-y-3">
-              <a href="tel:+74951234567" className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+79240424890" className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="h-5 w-5" />
-                <span>+7 (495) 123-45-67</span>
+                <span>+7 (924) 042-48-90</span>
               </a>
               <a href="mailto:info@gruzivzali.ru" className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors">
                 <Mail className="h-5 w-5" />
@@ -26,7 +26,7 @@ export const Footer = () => {
               </a>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
-                <span>г. Москва, ул. Примерная, д. 1</span>
+                <span>г. Тюмень, ул Республики 207, оф. 502</span>
               </div>
             </div>
           </div>

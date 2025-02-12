@@ -1,3 +1,4 @@
+
 import { Users, Package, Hammer, Brush, BedDouble } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -6,13 +7,13 @@ const services = [
     icon: Users,
     title: "Разнорабочие",
     description: "Универсальные работники для различных задач",
-    image: "/lovable-uploads/07f73292-7b96-4f56-82f5-87805b1a8b7f.png"
+    image: "/lovable-uploads/d62ba102-e96c-4297-aa06-461162b4a94c.png"
   },
   {
     icon: Package,
     title: "Грузчики",
     description: "Погрузка, разгрузка и перемещение грузов",
-    image: "/lovable-uploads/d62ba102-e96c-4297-aa06-461162b4a94c.png"
+    image: "/lovable-uploads/07f73292-7b96-4f56-82f5-87805b1a8b7f.png"
   },
   {
     icon: Hammer,
