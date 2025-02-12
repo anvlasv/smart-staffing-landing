@@ -51,11 +51,11 @@ export const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {services.map((service, index) => (
             <Card key={index} className="overflow-hidden group animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-              <div className="h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -71,11 +71,11 @@ export const ServicesSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {additionalServices.map((service, index) => (
             <Card key={index} className="overflow-hidden group animate-fade-in" style={{ animationDelay: `${(index + 3) * 100}ms` }}>
-              <div className="h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
