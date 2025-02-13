@@ -1,4 +1,3 @@
-
 import { Users, Package, Hammer, Brush, BedDouble } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -7,19 +6,19 @@ const services = [
     icon: Users,
     title: "Разнорабочие",
     description: "Универсальные работники для различных задач",
-    image: "/lovable-uploads/578b64df-ced1-41e5-bdaa-c1c5f575a795.png"
+    image: "/lovable-uploads/c31ad0a9-154d-4a7a-8e83-c52328aaed4c.png"
   },
   {
     icon: Package,
     title: "Грузчики",
     description: "Погрузка, разгрузка и перемещение грузов",
-    image: "/lovable-uploads/fc1d724d-1c78-4c3c-8b18-573ae10c78c3.png"
+    image: "/lovable-uploads/0dd8234d-f4a5-492d-80eb-c4c1281c5478.png"
   },
   {
     icon: Hammer,
     title: "Упаковщики",
     description: "Сортировка и упаковка товаров на складе",
-    image: "/lovable-uploads/d76cf390-ff03-46e1-bb44-be28bb6f5583.png"
+    image: "/lovable-uploads/ddf1c929-df4d-46d5-922f-18e51ae694dd.png"
   },
 ];
 
@@ -28,13 +27,13 @@ const additionalServices = [
     icon: Brush,
     title: "Уборщики",
     description: "Профессиональная уборка помещений",
-    image: "/lovable-uploads/ece4db20-5f19-4e18-9893-9176bca529e1.png"
+    image: "/lovable-uploads/2a85b0c1-572f-4e71-ba96-df42b78f17ec.png"
   },
   {
     icon: BedDouble,
     title: "Горничные",
     description: "Уборка и обслуживание номеров",
-    image: "/lovable-uploads/5a436532-fdab-4bf8-b9cb-4332b33fc8d1.png"
+    image: "/lovable-uploads/5409a98a-207d-4bf6-b374-34865742e464.png"
   },
 ];
 

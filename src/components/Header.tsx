@@ -9,8 +9,8 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/ece4db20-5f19-4e18-9893-9176bca529e1.png" 
-              alt="ГрузВзяли"
+              src="/lovable-uploads/ef35a989-b769-43ff-b6d3-5c621e4a43bb.png" 
+              alt="РабочийКласс"
               className="h-12 w-auto"
             />
           </div>

@@ -7,7 +7,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-4">ГрузВзяли</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">РабочийКласс</h3>
             <p className="text-white/80">
               Профессиональный аутстаффинг персонала в России. Быстро, надежно, выгодно.
             </p>
@@ -20,9 +20,9 @@ export const Footer = () => {
                 <Phone className="h-5 w-5" />
                 <span>+7 (924) 042-48-90</span>
               </a>
-              <a href="mailto:info@gruzivzali.ru" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+              <a href="mailto:barm.70@gmail.com" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
                 <Mail className="h-5 w-5" />
-                <span>info@gruzivzali.ru</span>
+                <span>barm.70@gmail.com</span>
               </a>
               <div className="flex items-center space-x-2 text-white/80">
                 <MapPin className="h-5 w-5" />
@@ -51,7 +51,7 @@ export const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-white/70">
-          <p>© {new Date().getFullYear()} ГрузВзяли. Все права защищены.</p>
+          <p>© {new Date().getFullYear()} РабочийКласс. Все права защищены.</p>
         </div>
       </div>
     </footer>
