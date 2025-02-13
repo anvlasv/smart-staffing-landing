@@ -15,7 +15,7 @@ const services = [
     icon: Package,
     title: "Грузчики",
     description: "Погрузка, разгрузка и перемещение грузов",
-    image: "/lovable-uploads/0dd8234d-f4a5-492d-80eb-c4c1281c5478.png",
+    image: "/lovable-uploads/2a85b0c1-572f-4e71-ba96-df42b78f17ec.png",
     bgColor: "bg-[#E6F3FF]",
     iconBg: "bg-[#4169E1]/20"
   },
@@ -23,7 +23,7 @@ const services = [
     icon: Hammer,
     title: "Упаковщики",
     description: "Сортировка и упаковка товаров на складе",
-    image: "/lovable-uploads/ddf1c929-df4d-46d5-922f-18e51ae694dd.png",
+    image: "/lovable-uploads/0dd8234d-f4a5-492d-80eb-c4c1281c5478.png",
     bgColor: "bg-[#F0FFF0]",
     iconBg: "bg-[#32CD32]/20"
   },
@@ -34,7 +34,7 @@ const additionalServices = [
     icon: Brush,
     title: "Уборщики",
     description: "Профессиональная уборка помещений",
-    image: "/lovable-uploads/2a85b0c1-572f-4e71-ba96-df42b78f17ec.png",
+    image: "/lovable-uploads/5409a98a-207d-4bf6-b374-34865742e464.png",
     bgColor: "bg-[#E6E6FA]",
     iconBg: "bg-[#9370DB]/20"
   },
@@ -42,7 +42,7 @@ const additionalServices = [
     icon: BedDouble,
     title: "Горничные",
     description: "Уборка и обслуживание номеров",
-    image: "/lovable-uploads/5409a98a-207d-4bf6-b374-34865742e464.png",
+    image: "/lovable-uploads/ddf1c929-df4d-46d5-922f-18e51ae694dd.png",
     bgColor: "bg-[#FFE4E1]",
     iconBg: "bg-[#FFA07A]/20"
   },
