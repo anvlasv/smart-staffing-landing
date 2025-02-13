@@ -1,3 +1,4 @@
+
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
@@ -9,7 +10,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { InputMask } from "react-input-mask";
+import InputMask from "react-input-mask";
 
 const pricingPlans = [
   {
@@ -122,9 +123,9 @@ export const PricingSection = () => {
                     Заказать
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-[425px]">
+                <DialogContent>
                   <DialogHeader>
-                    <DialogTitle className="text-2xl">Заказать {plan.title.toLowerCase()}</DialogTitle>
+                    <DialogTitle>Заказать {plan.title.toLowerCase()}</DialogTitle>
                   </DialogHeader>
                   <form onSubmit={handleSubmit} className="grid gap-4 py-4">
                     <div className="space-y-2">
