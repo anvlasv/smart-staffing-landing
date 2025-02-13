@@ -8,7 +8,11 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-white">ГрузВзяли</span>
+            <img 
+              src="/lovable-uploads/ece4db20-5f19-4e18-9893-9176bca529e1.png" 
+              alt="ГрузВзяли"
+              className="h-12 w-auto"
+            />
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

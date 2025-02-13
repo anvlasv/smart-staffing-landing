@@ -7,19 +7,19 @@ const services = [
     icon: Users,
     title: "Разнорабочие",
     description: "Универсальные работники для различных задач",
-    image: "/lovable-uploads/d62ba102-e96c-4297-aa06-461162b4a94c.png"
+    image: "/lovable-uploads/578b64df-ced1-41e5-bdaa-c1c5f575a795.png"
   },
   {
     icon: Package,
     title: "Грузчики",
     description: "Погрузка, разгрузка и перемещение грузов",
-    image: "/lovable-uploads/07f73292-7b96-4f56-82f5-87805b1a8b7f.png"
+    image: "/lovable-uploads/fc1d724d-1c78-4c3c-8b18-573ae10c78c3.png"
   },
   {
     icon: Hammer,
     title: "Упаковщики",
     description: "Сортировка и упаковка товаров на складе",
-    image: "/lovable-uploads/71bd238c-3ecc-49f3-a37a-b3760b2f1e53.png"
+    image: "/lovable-uploads/d76cf390-ff03-46e1-bb44-be28bb6f5583.png"
   },
 ];
 
@@ -28,7 +28,7 @@ const additionalServices = [
     icon: Brush,
     title: "Уборщики",
     description: "Профессиональная уборка помещений",
-    image: "/lovable-uploads/55149b19-8edd-40a8-88c7-7e8684e5236b.png"
+    image: "/lovable-uploads/ece4db20-5f19-4e18-9893-9176bca529e1.png"
   },
   {
     icon: BedDouble,

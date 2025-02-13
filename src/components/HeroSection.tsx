@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -9,6 +8,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { useToast } from "@/hooks/use-toast";
+import { InputMask } from "react-input-mask";
 
 export const HeroSection = () => {
   const { toast } = useToast();
@@ -19,7 +19,18 @@ export const HeroSection = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Send email to barm.70@gmail.com
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name') as string,
+      phone: formData.get('phone') as string,
+      message: formData.get('message') as string,
+    };
+
+    const mailtoLink = `mailto:barm.70@gmail.com?subject=${encodeURIComponent("Заявка персонала")}&body=${encodeURIComponent(
+      `Имя: ${data.name}\nТелефон: ${data.phone}\nСообщение: ${data.message}`
+    )}`;
+    window.location.href = mailtoLink;
+
     toast({
       title: "Заявка отправлена",
       description: "Мы свяжемся с вами в ближайшее время",
@@ -59,6 +70,7 @@ export const HeroSection = () => {
                         Ваше имя
                       </label>
                       <input
+                        name="name"
                         type="text"
                         className="w-full p-2 border rounded-lg"
                         required
@@ -68,8 +80,9 @@ export const HeroSection = () => {
                       <label className="text-sm font-medium leading-none">
                         Телефон
                       </label>
-                      <input
-                        type="tel"
+                      <InputMask
+                        mask="+7 (999) 999-99-99"
+                        name="phone"
                         className="w-full p-2 border rounded-lg"
                         required
                       />
@@ -79,6 +92,7 @@ export const HeroSection = () => {
                         Опишите ваши требования
                       </label>
                       <textarea
+                        name="message"
                         className="w-full p-2 border rounded-lg"
                         rows={3}
                         required

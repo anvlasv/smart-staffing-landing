@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import InputMask from "react-input-mask";
 
 export const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,13 @@ export const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create mailto link
+    const mailtoLink = `mailto:barm.70@gmail.com?subject=${encodeURIComponent("Заявка персонала")}&body=${encodeURIComponent(
+      `Имя: ${formData.name}\nТелефон: ${formData.phone}\nСообщение: ${formData.message}`
+    )}`;
+    window.location.href = mailtoLink;
+    
     toast({
       title: "Заявка отправлена",
       description: "Мы свяжемся с вами в ближайшее время",
@@ -45,16 +53,23 @@ export const ContactForm = () => {
               />
             </div>
             <div>
-              <Input
-                placeholder="Телефон"
-                type="tel"
+              <InputMask
+                mask="+7 (999) 999-99-99"
                 value={formData.phone}
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
                 required
-                className="w-full"
-              />
+              >
+                {(inputProps: any) => (
+                  <Input
+                    {...inputProps}
+                    placeholder="Телефон"
+                    type="tel"
+                    className="w-full"
+                  />
+                )}
+              </InputMask>
             </div>
             <div>
               <Textarea
