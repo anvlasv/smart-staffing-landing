@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -8,7 +9,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { InputMask } from "react-input-mask";
+import InputMask from "react-input-mask";
 
 export const HeroSection = () => {
   const { toast } = useToast();
