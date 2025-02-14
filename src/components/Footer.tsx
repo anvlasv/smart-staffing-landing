@@ -48,8 +48,15 @@ export const Footer = () => {
           </div>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-white/70">
-          <p>© {new Date().getFullYear()} РабочийКласс. Все права защищены.</p>
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row md:justify-between items-center text-white/60">
+            <p>© {new Date().getFullYear()} РабочийКласс. Все права защищены.</p>
+            <p className="mt-2 md:mt-0 text-sm">
+              <a href="https://t.me/person_grata" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Дизайн и разработка сайта</a>
+              {" - КБ "}
+              <a href="https://t.me/person_grata" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">"SV-Group"</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>;
