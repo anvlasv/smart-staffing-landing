@@ -1,5 +1,5 @@
 
-import { Phone, Mail, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
@@ -8,6 +8,10 @@ export const Header = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleNavigationClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -39,7 +43,7 @@ export const Header = () => {
           
           <div className="flex items-center space-x-4">
             <a href="tel:+79240424890" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors">
-              <Phone className="h-5 w-5" />
+              <Phone size={20} />
               <span className="hidden md:inline">+7 (924) 042-48-90</span>
             </a>
             <Button className="bg-white text-primary hover:bg-white/90" asChild>
@@ -50,7 +54,7 @@ export const Header = () => {
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -62,28 +66,28 @@ export const Header = () => {
               <a 
                 href="#services" 
                 className="text-white/90 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavigationClick}
               >
                 Услуги
               </a>
               <a 
                 href="#benefits" 
                 className="text-white/90 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavigationClick}
               >
                 Преимущества
               </a>
               <a 
                 href="#pricing" 
                 className="text-white/90 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavigationClick}
               >
                 Цены
               </a>
               <a 
                 href="#contact" 
                 className="text-white/90 hover:text-white transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavigationClick}
               >
                 Контакты
               </a>
