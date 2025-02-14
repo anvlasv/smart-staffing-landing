@@ -71,7 +71,7 @@ export const ServicesSection = () => {
                 <div className="absolute inset-0 bg-black/10 z-10" />
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} - услуги аутстаффинга в Тюмени`}
                   className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
@@ -96,7 +96,7 @@ export const ServicesSection = () => {
                 <div className="absolute inset-0 bg-black/10 z-10" />
                 <img
                   src={service.image}
-                  alt={service.title}
+                  alt={`${service.title} - профессиональный персонал в Тюмени`}
                   className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
