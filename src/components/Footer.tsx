@@ -1,3 +1,4 @@
+
 import { Phone, Mail, MapPin } from "lucide-react";
 export const Footer = () => {
   return <footer className="bg-gradient-to-br from-primary/95 to-primary py-12" id="contact">
@@ -49,9 +50,6 @@ export const Footer = () => {
         
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center text-white/70">
           <p>© {new Date().getFullYear()} РабочийКласс. Все права защищены.</p>
-          <p className="text-xs text-lime-200 font-light">
-            Дизайн <a href="https://t.me/person_grata" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors rounded-sm">SV-Group</a>
-          </p>
         </div>
       </div>
     </footer>;
