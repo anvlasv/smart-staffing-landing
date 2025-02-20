@@ -1,5 +1,6 @@
 
-import { Phone, Mail, MapPin, Telegram, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, MessageSquare } from "lucide-react";
+
 export const Footer = () => {
   return <footer className="bg-gradient-to-br from-primary/95 to-primary py-12" id="contact">
       <div className="container mx-auto px-4">
@@ -17,7 +18,7 @@ export const Footer = () => {
                 className="text-white/80 hover:text-white transition-colors"
                 aria-label="Наш Телеграм"
               >
-                <Telegram size={24} />
+                <MessageCircle size={24} />
               </a>
               <a
                 href="https://wa.me/79227837198"

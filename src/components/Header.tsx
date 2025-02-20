@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X, Telegram, MessageSquare } from "lucide-react";
+import { Phone, Menu, X, MessageCircle, MessageSquare } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
@@ -50,7 +50,7 @@ export const Header = () => {
                 className="text-white/90 hover:text-white transition-colors"
                 aria-label="Наш Телеграм"
               >
-                <Telegram size={24} />
+                <MessageCircle size={24} />
               </a>
               <a
                 href="https://wa.me/79227837198"
