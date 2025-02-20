@@ -49,7 +49,7 @@ export const Footer = () => {
                         className="text-white/80 hover:text-white transition-colors"
                         aria-label="Наш WhatsApp"
                       >
-                        <MessageSquare size={20} />
+                        <MessageCircle size={20} />
                       </a>
                     </TooltipTrigger>
                     <TooltipContent>

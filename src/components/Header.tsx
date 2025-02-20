@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X, MessageSquare, Send } from "lucide-react";
+import { Phone, Menu, X, MessageCircle, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -72,7 +72,7 @@ export const Header = () => {
                       className="text-white/90 hover:text-white transition-colors"
                       aria-label="Наш WhatsApp"
                     >
-                      <MessageSquare size={24} />
+                      <MessageCircle size={24} />
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
