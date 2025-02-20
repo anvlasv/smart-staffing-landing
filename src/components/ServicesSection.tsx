@@ -1,3 +1,4 @@
+
 import { Users, Package, Hammer, Brush, BedDouble, ShoppingBag } from "lucide-react";
 import { Card } from "./ui/card";
 
@@ -26,9 +27,6 @@ const services = [
     bgColor: "bg-[#F0FFF0]",
     iconBg: "bg-[#32CD32]/20"
   },
-];
-
-const additionalServices = [
   {
     icon: Brush,
     title: "Уборщики",
@@ -67,7 +65,7 @@ export const ServicesSection = () => {
             Предоставляем персонал для различных сфер бизнеса. Работники для склада, уборщики для офиса и другие специалисты доступны в аренду на любой срок.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -79,31 +77,6 @@ export const ServicesSection = () => {
                 <img
                   src={service.image}
                   alt={`${service.title} - услуги аутстаффинга в Тюмени`}
-                  className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <div className={`mb-4 ${service.iconBg} w-14 h-14 rounded-full flex items-center justify-center`}>
-                  <service.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </div>
-            </Card>
-          ))}
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {additionalServices.map((service, index) => (
-            <Card 
-              key={index} 
-              className={`overflow-hidden group animate-fade-in ${service.bgColor} bg-opacity-30`} 
-              style={{ animationDelay: `${(index + 3) * 100}ms` }}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <div className="absolute inset-0 bg-black/10 z-10" />
-                <img
-                  src={service.image}
-                  alt={`${service.title} - профессиональный персонал в Тюмени`}
                   className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
