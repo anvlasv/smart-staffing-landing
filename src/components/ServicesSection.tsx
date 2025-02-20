@@ -1,5 +1,4 @@
-
-import { Users, Package, Hammer, Brush, BedDouble } from "lucide-react";
+import { Users, Package, Hammer, Brush, BedDouble, ShoppingBag } from "lucide-react";
 import { Card } from "./ui/card";
 
 const services = [
@@ -46,6 +45,14 @@ const additionalServices = [
     bgColor: "bg-[#FFE4E1]",
     iconBg: "bg-[#FFA07A]/20"
   },
+  {
+    icon: ShoppingBag,
+    title: "Мерчендайзеры",
+    description: "Выкладка товара и контроль ассортимента",
+    image: "/lovable-uploads/82d7d1ca-3342-41e2-b7a1-29d447967bf7.png",
+    bgColor: "bg-[#E6F3FF]",
+    iconBg: "bg-[#4169E1]/20"
+  }
 ];
 
 export const ServicesSection = () => {

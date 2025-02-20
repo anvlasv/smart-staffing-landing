@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X } from "lucide-react";
+import { Phone, Menu, X, Telegram, MessageSquare } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 
@@ -42,6 +42,26 @@ export const Header = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
+              <a
+                href="https://t.me/tmnsklwork"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-white transition-colors"
+                aria-label="Наш Телеграм"
+              >
+                <Telegram size={24} />
+              </a>
+              <a
+                href="https://wa.me/79227837198"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/90 hover:text-white transition-colors"
+                aria-label="Наш WhatsApp"
+              >
+                <MessageSquare size={24} />
+              </a>
+            </div>
             <a href="tel:+79240424890" className="flex items-center space-x-2 text-white/90 hover:text-white transition-colors">
               <Phone size={20} />
               <span className="hidden md:inline">+7 (924) 042-48-90</span>
@@ -59,7 +79,6 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-primary shadow-lg py-4 px-4 animate-fade-in">
             <nav className="flex flex-col space-y-4">
