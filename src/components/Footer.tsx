@@ -1,5 +1,6 @@
 
-import { Phone, Mail, MapPin, MessageCircle, MessageSquare } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, MessageSquare, Send } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const Footer = () => {
   return <footer className="bg-gradient-to-br from-primary/95 to-primary py-12" id="contact">
@@ -20,24 +21,42 @@ export const Footer = () => {
                   <Phone size={20} />
                   <span>+7 (924) 042-48-90</span>
                 </a>
-                <a
-                  href="https://t.me/tmnsklwork"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white transition-colors"
-                  aria-label="Наш Телеграм"
-                >
-                  <MessageCircle size={20} />
-                </a>
-                <a
-                  href="https://wa.me/79227837198"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-white transition-colors"
-                  aria-label="Наш WhatsApp"
-                >
-                  <MessageSquare size={20} />
-                </a>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href="https://t.me/tmnsklwork"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/80 hover:text-white transition-colors"
+                        aria-label="Наш Телеграм"
+                      >
+                        <Send size={20} />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Напишите в Телеграм</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <a
+                        href="https://wa.me/79227837198"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/80 hover:text-white transition-colors"
+                        aria-label="Наш WhatsApp"
+                      >
+                        <MessageSquare size={20} />
+                      </a>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Напишите в WA</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
               </div>
               <a href="mailto:barm.70@gmail.com" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
                 <Mail size={20} />
