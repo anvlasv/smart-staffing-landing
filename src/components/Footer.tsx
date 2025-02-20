@@ -10,35 +10,35 @@ export const Footer = () => {
             <p className="text-white/80">
               Профессиональный аутстаффинг персонала в России. Быстро, надежно, выгодно.
             </p>
-            <div className="mt-4 flex space-x-4">
-              <a
-                href="https://t.me/tmnsklwork"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
-                aria-label="Наш Телеграм"
-              >
-                <MessageCircle size={24} />
-              </a>
-              <a
-                href="https://wa.me/79227837198"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
-                aria-label="Наш WhatsApp"
-              >
-                <MessageSquare size={24} />
-              </a>
-            </div>
           </div>
           
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Контакты</h4>
             <div className="space-y-3">
-              <a href="tel:+79240424890" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
-                <Phone size={20} />
-                <span>+7 (924) 042-48-90</span>
-              </a>
+              <div className="flex items-center space-x-4">
+                <a href="tel:+79240424890" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                  <Phone size={20} />
+                  <span>+7 (924) 042-48-90</span>
+                </a>
+                <a
+                  href="https://t.me/tmnsklwork"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors"
+                  aria-label="Наш Телеграм"
+                >
+                  <MessageCircle size={20} />
+                </a>
+                <a
+                  href="https://wa.me/79227837198"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors"
+                  aria-label="Наш WhatsApp"
+                >
+                  <MessageSquare size={20} />
+                </a>
+              </div>
               <a href="mailto:barm.70@gmail.com" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
                 <Mail size={20} />
                 <span>barm.70@gmail.com</span>
