@@ -19,11 +19,11 @@ export const Header = () => {
     <header className="bg-gradient-to-r from-primary/90 to-primary py-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center">
             <img 
               src="/lovable-uploads/ef35a989-b769-43ff-b6d3-5c621e4a43bb.png" 
               alt="РабочийКласс"
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </div>
           

@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, MessageCircle, MessageSquare, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export const Footer = () => {
@@ -80,6 +80,9 @@ export const Footer = () => {
               </a>
               <a href="#pricing" className="block text-white/80 hover:text-white transition-colors">
                 Цены
+              </a>
+              <a href="#faq" className="block text-white/80 hover:text-white transition-colors">
+                Частые вопросы
               </a>
               <a href="#contact" className="block text-white/80 hover:text-white transition-colors">
                 Контакты
