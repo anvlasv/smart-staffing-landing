@@ -10,9 +10,12 @@ import {
 } from "./ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import InputMask from "react-input-mask";
+import { useState } from "react";
 
 export const HeroSection = () => {
   const { toast } = useToast();
+  const [isOpen, setIsOpen] = useState(false);
+  
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
     pricingSection?.scrollIntoView({ behavior: 'smooth' });
@@ -36,6 +39,9 @@ export const HeroSection = () => {
       title: "Заявка отправлена",
       description: "Мы свяжемся с вами в ближайшее время",
     });
+    
+    // Close the dialog after submission
+    setIsOpen(false);
   };
 
   return (
@@ -54,7 +60,7 @@ export const HeroSection = () => {
               Оказываем услуги по предоставлению квалифицированного персонала любой специализации: грузчики, разнорабочие, упаковщики. Оформление договора за 2 часа, гарантия качества работы, доступные цены.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Dialog>
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
                 <DialogTrigger asChild>
                   <Button size="lg" className="group bg-primary hover:bg-primary/90 transition-colors font-montserrat">
                     Заказать персонал сейчас

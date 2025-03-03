@@ -11,6 +11,7 @@ import {
 } from "./ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import InputMask from "react-input-mask";
+import { useState } from "react";
 
 const pricingPlans = [
   {
@@ -51,6 +52,7 @@ const pricingPlans = [
 
 export const PricingSection = () => {
   const { toast } = useToast();
+  const [openDialogIndex, setOpenDialogIndex] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -70,6 +72,9 @@ export const PricingSection = () => {
       title: "Заявка отправлена",
       description: "Мы свяжемся с вами в ближайшее время",
     });
+    
+    // Close the dialog after submission
+    setOpenDialogIndex(null);
   };
 
   return (
@@ -113,7 +118,10 @@ export const PricingSection = () => {
                   </li>
                 ))}
               </ul>
-              <Dialog>
+              <Dialog 
+                open={openDialogIndex === index} 
+                onOpenChange={(open) => setOpenDialogIndex(open ? index : null)}
+              >
                 <DialogTrigger asChild>
                   <Button
                     className={`w-full ${
