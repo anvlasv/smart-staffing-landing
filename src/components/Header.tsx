@@ -86,7 +86,10 @@ export const Header = () => {
               <span className="hidden md:inline">+7 (924) 042-48-90</span>
             </a>
             <Button className="bg-white text-primary hover:bg-white/90" asChild>
-              <a href="#contact">Оставить заявку</a>
+              <a href="#contact">
+                <span className="hidden md:inline">Оставить заявку</span>
+                <span className="md:hidden">Заявка</span>
+              </a>
             </Button>
             <button
               className="md:hidden text-white p-2"
