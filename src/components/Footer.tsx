@@ -97,10 +97,6 @@ export const Footer = () => {
                 <span>Контакты</span>
               </a>
               
-              <p className="text-white/80 text-sm mt-2 pt-2 border-t border-white/10">
-                ИП А.Б. Васюков ИНН 860319248616
-              </p>
-              
               <Dialog open={isPrivacyOpen} onOpenChange={setIsPrivacyOpen}>
                 <DialogTrigger asChild>
                   <button className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
@@ -186,6 +182,12 @@ export const Footer = () => {
               <a href="https://t.me/person_grata" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Дизайн и разработка сайта</a>
               {" - КБ "}
               <a href="https://t.me/person_grata" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">"SV-Group"</a>
+            </p>
+          </div>
+          
+          <div className="text-center mt-6">
+            <p className="text-white/90 font-bold text-sm">
+              ИП А.Б. Васюков ИНН 860319248616
             </p>
           </div>
         </div>
