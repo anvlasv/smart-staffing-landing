@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, MessageCircle, Send, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send, Shield, FileText, Star, DollarSign, HelpCircle, Contact, Home } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
@@ -14,9 +14,6 @@ export const Footer = () => {
             <h3 className="text-2xl font-bold text-white mb-4">РабочийКласс</h3>
             <p className="text-white/80 mb-6">
               Профессиональный аутстаффинг персонала в России. Быстро, надежно, выгодно.
-            </p>
-            <p className="text-white/80 text-sm">
-              ИП А.Б. Васюков ИНН 860319248616
             </p>
           </div>
           
@@ -79,21 +76,30 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Навигация</h4>
             <div className="space-y-2">
-              <a href="#services" className="block text-white/80 hover:text-white transition-colors">
-                Услуги
+              <a href="#services" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                <FileText size={16} />
+                <span>Услуги</span>
               </a>
-              <a href="#benefits" className="block text-white/80 hover:text-white transition-colors">
-                Преимущества
+              <a href="#benefits" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                <Star size={16} />
+                <span>Преимущества</span>
               </a>
-              <a href="#pricing" className="block text-white/80 hover:text-white transition-colors">
-                Цены
+              <a href="#pricing" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                <DollarSign size={16} />
+                <span>Цены</span>
               </a>
-              <a href="#faq" className="block text-white/80 hover:text-white transition-colors">
-                Частые вопросы
+              <a href="#faq" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                <HelpCircle size={16} />
+                <span>Частые вопросы</span>
               </a>
-              <a href="#contact" className="block text-white/80 hover:text-white transition-colors">
-                Контакты
+              <a href="#contact" className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors">
+                <Contact size={16} />
+                <span>Контакты</span>
               </a>
+              
+              <p className="text-white/80 text-sm mt-2 pt-2 border-t border-white/10">
+                ИП А.Б. Васюков ИНН 860319248616
+              </p>
               
               <Dialog open={isPrivacyOpen} onOpenChange={setIsPrivacyOpen}>
                 <DialogTrigger asChild>
