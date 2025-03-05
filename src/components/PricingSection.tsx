@@ -27,7 +27,7 @@ const pricingPlans = [
   },
   {
     title: "Разнорабочие",
-    price: "от 4600",
+    price: "от 4000",
     period: "за смену",
     features: [
       "Опыт работы от 1 года",
@@ -39,7 +39,7 @@ const pricingPlans = [
   },
   {
     title: "Уборщики",
-    price: "от 4000",
+    price: "от 3500",
     period: "за смену",
     features: [
       "Профессиональные средства",
