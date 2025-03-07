@@ -52,43 +52,22 @@ const pricingPlans = [
 export const PricingSection = () => {
   const { toast } = useToast();
   const [openDialogIndex, setOpenDialogIndex] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    if (openDialogIndex !== null) {
-      formData.append('plan', pricingPlans[openDialogIndex].title);
-      formData.append('form', 'pricing');
-    }
-
-    fetch('send-mail.php', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => {
-      if (response.ok) {
-        toast({
-          title: "Заявка отправлена",
-          description: "Мы свяжемся с вами в ближайшее время",
-        });
-        setOpenDialogIndex(null);
-        e.currentTarget.reset();
-      } else {
-        toast({
-          title: "Ошибка отправки",
-          description: "Пожалуйста, попробуйте еще раз",
-          variant: "destructive"
-        });
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
+    setIsSubmitting(true);
+    
+    // Имитация отправки формы
+    setTimeout(() => {
+      setIsSubmitting(false);
       toast({
-        title: "Ошибка отправки",
-        description: "Пожалуйста, попробуйте еще раз",
-        variant: "destructive"
+        title: "Заявка отправлена",
+        description: "Мы свяжемся с вами в ближайшее время",
       });
-    });
+      setOpenDialogIndex(null);
+      e.currentTarget.reset();
+    }, 1000);
   };
 
   return (
@@ -183,8 +162,8 @@ export const PricingSection = () => {
                         required
                       />
                     </div>
-                    <Button type="submit">
-                      Отправить заявку
+                    <Button type="submit" disabled={isSubmitting}>
+                      {isSubmitting ? "Отправка..." : "Отправить заявку"}
                     </Button>
                   </form>
                 </DialogContent>

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -12,45 +13,21 @@ export const ContactForm = () => {
     message: "",
   });
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Create form data for sending to server
-    const form = new FormData();
-    form.append('name', formData.name);
-    form.append('phone', formData.phone);
-    form.append('message', formData.message);
-    form.append('form', 'contact');
-    
-    // Send data to send-mail.php
-    fetch('send-mail.php', {
-      method: 'POST',
-      body: form
-    })
-    .then(response => {
-      if (response.ok) {
-        toast({
-          title: "Заявка отправлена",
-          description: "Мы свяжемся с вами в ближайшее время",
-        });
-        setFormData({ name: "", phone: "", message: "" });
-      } else {
-        toast({
-          title: "Ошибка отправки",
-          description: "Пожалуйста, попробуйте еще раз",
-          variant: "destructive"
-        });
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
+    // Имитация отправки формы
+    setTimeout(() => {
+      setIsSubmitting(false);
       toast({
-        title: "Ошибка отправки",
-        description: "Пожалуйста, попробуйте еще раз",
-        variant: "destructive"
+        title: "Заявка отправлена",
+        description: "Мы свяжемся с вами в ближайшее время",
       });
-    });
+      setFormData({ name: "", phone: "", message: "" });
+    }, 1000);
   };
 
   return (
@@ -105,8 +82,8 @@ export const ContactForm = () => {
                 rows={4}
               />
             </div>
-            <Button type="submit" className="w-full">
-              Отправить заявку
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Отправка..." : "Отправить заявку"}
             </Button>
           </form>
         </div>
