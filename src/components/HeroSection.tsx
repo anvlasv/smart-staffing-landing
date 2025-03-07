@@ -14,7 +14,6 @@ import { useState } from "react";
 export const HeroSection = () => {
   const { toast } = useToast();
   const [isOpen, setIsOpen] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const scrollToPricing = () => {
     const pricingSection = document.getElementById('pricing');
@@ -23,18 +22,38 @@ export const HeroSection = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    const formData = new FormData(e.currentTarget);
+    formData.append('form', 'hero');
     
-    // Имитация отправки формы
-    setTimeout(() => {
-      setIsSubmitting(false);
+    // Send data to send-mail.php
+    fetch('send-mail.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+        setIsOpen(false);
+        e.currentTarget.reset();
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: "Пожалуйста, попробуйте еще раз",
+          variant: "destructive"
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
       toast({
-        title: "Заявка отправлена",
-        description: "Мы свяжемся с вами в ближайшее время",
+        title: "Ошибка отправки",
+        description: "Пожалуйста, попробуйте еще раз",
+        variant: "destructive"
       });
-      setIsOpen(false);
-      e.currentTarget.reset();
-    }, 1000);
+    });
   };
 
   return (
@@ -98,8 +117,8 @@ export const HeroSection = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" disabled={isSubmitting}>
-                      {isSubmitting ? "Отправка..." : "Отправить заявку"}
+                    <Button type="submit">
+                      Отправить заявку
                     </Button>
                   </form>
                 </DialogContent>
