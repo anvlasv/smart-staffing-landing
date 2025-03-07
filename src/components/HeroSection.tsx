@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import {
@@ -24,24 +23,37 @@ export const HeroSection = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
-    const data = {
-      name: formData.get('name') as string,
-      phone: formData.get('phone') as string,
-      message: formData.get('message') as string,
-    };
-
-    const mailtoLink = `mailto:barm.70@gmail.com?subject=${encodeURIComponent("Заявка персонала")}&body=${encodeURIComponent(
-      `Имя: ${data.name}\nТелефон: ${data.phone}\nСообщение: ${data.message}`
-    )}`;
-    window.location.href = mailtoLink;
-
-    toast({
-      title: "Заявка отправлена",
-      description: "Мы свяжемся с вами в ближайшее время",
-    });
+    formData.append('form', 'hero');
     
-    // Close the dialog after submission
-    setIsOpen(false);
+    // Send data to send-mail.php
+    fetch('send-mail.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+        setIsOpen(false);
+        e.currentTarget.reset();
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: "Пожалуйста, попробуйте еще раз",
+          variant: "destructive"
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Пожалуйста, попробуйте еще раз",
+        variant: "destructive"
+      });
+    });
   };
 
   return (
